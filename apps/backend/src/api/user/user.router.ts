@@ -8,6 +8,6 @@ export const userRouter: Router = (() => {
   const router = express.Router();
   router.use(authMiddleware)
   router.post('/update-user-data', UserController.updateUserData);
-  router.get('/get-user-data', UserController.getUserData);
+  router.get('/fetch-user-data', UserController.getUserData);
   return router;
 })();
