@@ -1,0 +1,72 @@
+{
+  "name": "@repo/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Raizal I. N. Pregnanta",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test:watch": "jest --watch",
+    "test": "jest",
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.1",
+    "@mui/icons-material": "next",
+    "@mui/material": "next",
+    "@mui/material-nextjs": "^6.4.3",
+    "@reduxjs/toolkit": "^2.5.1",
+    "dayjs": "^1.11.10",
+    "next": "15.1.6",
+    "node-fetch": "^3.3.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-hook-form": "^7.52.2",
+    "react-icons": "^4.10.1",
+    "react-redux": "^9.2.0",
+    "zod": "^3.22.4",
+    "@repo/entity": "*"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@svgr/webpack": "^8.0.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "19.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "rc",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.5.0",
+    "next-router-mock": "^0.7.5",
+    "postcss": "^8.4.26",
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "**/*.{json,css,scss,md,webmanifest}": [
+      "prettier -w"
+    ]
+  }
+}
